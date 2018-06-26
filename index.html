@@ -11,6 +11,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 	
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<style>
+		.icon-btn {
+			cursor: pointer;
+		}
+	</style>
 </head>
 
 <body>
@@ -38,8 +43,8 @@
 									<label for="email">Email</label>
 								</div>
 								<div class="input-field col m6 s12">
-									<input id="phone" type="text" class="validate" maxlength="10" pattern="\d*" required>
-									<label for="phone">Phone Number</label>
+									<input id="phone" type="text" class="validate" maxlength="10" minlength="10" pattern="\d*" required>
+									<label for="phone">Phone</label>
 								</div>
 							</div>
 							<div class="row">
@@ -71,13 +76,13 @@
         <div class="col m12 s12">
 			<div class="card">
 				<div class="card-content">
-					<h5 class="center-align">Contact List</h5>
+					<h5 class="center-align">Contacts</h5>
 					<table>
 						<thead>
 						  <tr>
 							  <th>Name</th>
 							  <th>Email</th>
-							  <th>Phone Number</th>
+							  <th>Phone</th>
 							  <th>Status</th>
 							  <th>Actions</th>
 						  </tr>
@@ -88,30 +93,30 @@
 							<td>Alvin</td>
 							<td>Eclair</td>
 							<td>$0.87</td>
-							<td>$0.87</td>
+							<td><span class="new badge red darken-1" data-badge-caption="">Inactive</span></td>
 							<td>
-								<i class="material-icons">edit</i>
-								<i class="material-icons">delete</i>
+								<i class="material-icons icon-btn">edit</i>
+								<i class="material-icons icon-btn">delete</i>
 							</td>
 						  </tr>
 						  <tr>
 							<td>Alvin</td>
 							<td>Eclair</td>
 							<td>$0.87</td>
-							<td>$0.87</td>
+							<td><span class="new badge green darken-3" data-badge-caption="">Active</span></td>
 							<td>
-								<i class="material-icons">edit</i>
-								<i class="material-icons">delete</i>
+								<i class="material-icons icon-btn">edit</i>
+								<i class="material-icons icon-btn">delete</i>
 							</td>
 						  </tr>
 						  <tr>
 							<td>Alvin</td>
 							<td>Eclair</td>
 							<td>$0.87</td>
-							<td>$0.87</td>
+							<td><span class="new badge red darken-1" data-badge-caption="">Inactive</span></td>
 							<td>
-								<i class="material-icons">edit</i>
-								<i class="material-icons">delete</i>
+								<i class="material-icons icon-btn">edit</i>
+								<i class="material-icons icon-btn">delete</i>
 							</td>
 						  </tr>
 						</tbody>
