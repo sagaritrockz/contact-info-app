@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col m12 s12">
+			<div class="card">
+				<div class="card-content">
+					<h5 class="center-align">Add Contact</h5>
+					<div class="row">
+						<form class="col s12">
+							<div class="row">
+								<div class="input-field col m6 s12">
+									<input id="first_name" type="text" class="validate" required>
+									<label for="first_name">First Name</label>
+								</div>
+								<div class="input-field col m6 s12">
+									<input id="last_name" type="text" class="validate" required>
+									<label for="last_name">Last Name</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col m6 s12">
+									<input id="email" type="email" class="validate" required>
+									<label for="email">Email</label>
+								</div>
+								<div class="input-field col m6 s12">
+									<input id="phone" type="text" class="validate" maxlength="10" pattern="\d*" required>
+									<label for="phone">Phone Number</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col m6">
+									<div class="input-field left">
+										<label for="status">Status</label>
+									</div>
+									<div class="input-field switch col m10 right">
+										<label>
+										  <input id="status" type="checkbox" checked="checked">
+										  <span class="lever"></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col m12 right-align">
+								 <button class="btn btn-medium waves-effect waves-light" type="button" name="action">Add</button>
+								 <button class="btn btn-medium waves-effect waves-light" type="button" name="action">Clear</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col m12 s12">
+			<div class="card">
+				<div class="card-content">
+					<h5 class="center-align">Contact List</h5>
+					<table>
+						<thead>
+						  <tr>
+							  <th>Name</th>
+							  <th>Email</th>
+							  <th>Phone Number</th>
+							  <th>Status</th>
+							  <th>Actions</th>
+						  </tr>
+						</thead>
+
+						<tbody>
+						  <tr>
+							<td>Alvin</td>
+							<td>Eclair</td>
+							<td>$0.87</td>
+							<td>$0.87</td>
+							<td>
+								<i class="material-icons">edit</i>
+								<i class="material-icons">delete</i>
+							</td>
+						  </tr>
+						  <tr>
+							<td>Alvin</td>
+							<td>Eclair</td>
+							<td>$0.87</td>
+							<td>$0.87</td>
+							<td>
+								<i class="material-icons">edit</i>
+								<i class="material-icons">delete</i>
+							</td>
+						  </tr>
+						  <tr>
+							<td>Alvin</td>
+							<td>Eclair</td>
+							<td>$0.87</td>
+							<td>$0.87</td>
+							<td>
+								<i class="material-icons">edit</i>
+								<i class="material-icons">delete</i>
+							</td>
+						  </tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+    </div>
+</div>
+</body>
+
+</html>
