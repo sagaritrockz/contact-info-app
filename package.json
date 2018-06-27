@@ -1,0 +1,37 @@
+{
+  "name": "contact-info-app",
+  "version": "1.0.0",
+  "description": "Contact Information app for storing, editing and deleting contact information like name, phone, email.",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagaritrockz/contact-info-app.git"
+  },
+  "keywords": [
+    "contact-information-app"
+  ],
+  "author": "Sagar Patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sagaritrockz/contact-info-app/issues"
+  },
+  "homepage": "https://github.com/sagaritrockz/contact-info-app#readme",
+  "dependencies": {
+    "angular": "^1.7.2",
+    "http-server": "^0.11.1",
+    "jquery": "^2.2.1",
+    "materialize-css": "^0.100.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-cli": "^2.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0"
+  }
+}

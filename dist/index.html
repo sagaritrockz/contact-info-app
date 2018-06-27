@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="contactInformationApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.min.css">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<style>
+		.icon-btn {
+			cursor: pointer;
+		}
+    .badge-alignment {
+      margin-left: 0px !important;
+      float: left !important;
+    }
+	</style>
+</head>
+<body>
+<div class="container ng-cloak" ng-controller="ContactInformationController as contactInfoCtrl">
+    <div class="row">
+        <div class="col m12 s12">
+			<div class="card">
+				<div class="card-content">
+					<h5 class="center-align">Add Contact</h5>
+					<div class="row">
+						<form class="col s12" name="contactForm" novalidate>
+							<div class="row">
+								<div class="input-field col m6 s12">
+									<input id="first_name" type="text" class="validate" ng-model="contactInfoCtrl.contact.firstName" value="{{contactInfoCtrl.contact.firstName}}" name="firstName" required>
+									<label for="first_name">First Name</label>
+                  <span class="red-text" ng-show="contactForm.firstName.$touched && contactForm.firstName.$invalid">Please enter First Name.</span>
+								</div>
+								<div class="input-field col m6 s12">
+									<input id="last_name" type="text" class="validate" ng-model="contactInfoCtrl.contact.lastName" value="{{contactInfoCtrl.contact.lastName}}" name="lastName" required>
+									<label for="last_name">Last Name</label>
+                  <span class="red-text" ng-show="contactForm.lastName.$touched && contactForm.lastName.$invalid">Please enter Last Name.</span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col m6 s12">
+									<input id="email" type="email" class="validate" ng-model="contactInfoCtrl.contact.email" value="{{contactInfoCtrl.contact.email}}" name="email" required>
+									<label for="email">Email</label>
+                  <div class="red-text" ng-show="contactForm.email.$touched && contactForm.email.$invalid">
+                    <span ng-show="contactForm.email.$error.required">Please enter Email.</span>
+                    <span ng-show="contactForm.email.$error.email">Please enter valid Email.</span>
+                  </div>
+								</div>
+								<div class="input-field col m6 s12">
+									<input id="phone" type="text" class="validate" maxlength="10" minlength="10" pattern="\d*" ng-model="contactInfoCtrl.contact.phone" value="{{contactInfoCtrl.contact.phone}}" name="phone" required>
+									<label for="phone">Phone</label>
+                  <div class="red-text" ng-show="contactForm.phone.$touched && contactForm.phone.$invalid">
+                    <span ng-show="contactForm.email.$error.required">Please enter Phone number.</span>
+                  </div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col m6">
+									<div class="input-field left">
+										<label for="status">Status</label>
+									</div>
+									<div class="input-field switch col m10 right">
+										<label>
+										  <input id="status" type="checkbox" ng-model="contactInfoCtrl.contact.isActive" value="{{contactInfoCtrl.contact.isActive}}" ng-custom-true="true" ng-custom-false="false" checked="checked">
+										  <span class="lever"></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col m12 right-align">
+								 <button class="btn btn-medium waves-effect waves-light" type="button" name="action" ng-click="contactInfoCtrl.saveContact(contactInfoCtrl.contact.id, contactForm)" ng-disabled="contactForm.firstName.$dirty && contactForm.firstName.$invalid || contactForm.lastName.$dirty && contactForm.lastName.$invalid || contactForm.email.$dirty && contactForm.email.$invalid || contactForm.phone.$dirty && contactForm.phone.$invalid">Save</button>
+								 <button class="btn btn-medium waves-effect waves-light" type="button" name="action" ng-click="contactInfoCtrl.clearForm()">Cancel</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col m12 s12">
+			<div class="card">
+				<div class="card-content">
+					<h5 class="center-align">Contacts</h5>
+					<span ng-if="!contactInfoCtrl.contacts.length > 0" class="teal-text text-lighten-1">No Contacts. Please add few...</span>
+					<table ng-if="contactInfoCtrl.contacts.length > 0">
+						<thead>
+						  <tr>
+							  <th>Name</th>
+							  <th>Email</th>
+							  <th>Phone</th>
+							  <th>Status</th>
+							  <th>Actions</th>
+						  </tr>
+						</thead>
+
+						<tbody>
+						  <tr ng-repeat="contact in contactInfoCtrl.contacts track by contact.id">
+							<td>{{contact.firstName}} {{contact.lastName}}</td>
+							<td>{{contact.email}}</td>
+							<td>{{contact.phone}}</td>
+							<td>
+								<span ng-if="!contact.isActive" class="new badge badge-alignment red darken-1" data-badge-caption="">Inactive</span>
+								<span ng-if="contact.isActive" class="new badge badge-alignment green darken-3" data-badge-caption="">Active</span>
+							</td>
+							<td>
+								<i class="material-icons icon-btn" ng-click="contactInfoCtrl.editContact(contact.id)">edit</i>
+								<i class="material-icons icon-btn" ng-click="contactInfoCtrl.deleteContact(contact.id)">delete</i>
+							</td>
+						  </tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+    </div>
+</div>
+<script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="./js/bundle.js"></script>
+</body>
+
+</html>
