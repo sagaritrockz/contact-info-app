@@ -1,4 +1,4 @@
-# Project Title
+# Contact Book
 
 Contact Book is an application to store your basic contact details like name, phone number, email. It also allows to edit and delete contacts. On top of that, it has feature to mark a contact's status whether it is active or not.
 
@@ -11,29 +11,27 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 
-
+Nodejs package manager
 ```shell
 npm
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+A step by step series of commands that tell you how to get a development env running
 
-After installing npm
+After installing npm, run the following command in the root  directory of the application.
 ```
 npm install
-
 ```
 
-After installing all the dependency
+After installing all the dependencies, make the build using following command
 
 ```
 npm build
-
 ```
 
-once the build is completed.
+once the build is completed. Spin the server with following command.
 
 ```
 npm start
@@ -52,4 +50,4 @@ For deployment, upload all the files from the ./dist directory to the server.
 
 ## Author
 
-* **Sagar Patel** - *Initial work* - [PurpleBooth](https://github.com/sagaritrockz)
+* **Sagar Patel** - *Initial work* - (https://github.com/sagaritrockz)
