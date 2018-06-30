@@ -1,0 +1,15 @@
+@import 'theme';
+
+.icon-btn {
+  cursor: pointer;
+}
+.badge-alignment {
+  margin-left: 0px !important;
+  float: left !important;
+}
+.btn-custom {
+  background-color: $btn-color !important;
+}
+.text-color-custom {
+  color: $text-color !important;
+}
