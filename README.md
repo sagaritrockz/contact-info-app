@@ -37,6 +37,13 @@ once the build is completed. Spin the server with following command.
 npm start
 ```
 
+## Unit testing
+To run unit test cases separately, use following command
+
+```
+karma start
+```
+
 ## Deployment
 
 For deployment, upload all the files from the ./dist directory to the server.
