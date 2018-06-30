@@ -28,7 +28,7 @@ npm install
 After installing all the dependencies, make the build using following command
 
 ```
-npm build
+npm run build
 ```
 
 once the build is completed. Spin the server with following command.
