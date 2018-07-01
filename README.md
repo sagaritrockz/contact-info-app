@@ -46,7 +46,7 @@ karma start
 
 ## Deployment
 
-For deployment, upload all the files from the ./dist directory to the server.
+For deployment, upload all the files from the ./dist directory to the server, along with angularjs, jquery and materializecss packages from node_modules.
 
 ## Built With
 
