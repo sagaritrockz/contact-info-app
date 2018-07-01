@@ -13,12 +13,13 @@ function ContactInformationController($scope, contactInformationFactory, utilFac
 
     if (id !== undefined && $scope.contact.id !== undefined) {
       // For Contact Edit.
-      angular.forEach($scope.contacts, function (contact) {
+      $scope.contacts = $scope.contacts.map(function (contact) {
         if (contact.id == id) {
           $scope.contact.name = buildNameString($scope.contact.firstName, $scope.contact.lastName);
-          contact = angular.copy($scope.contact);
+          contact = angular.copy($scope.contact);            
           utilFactory.toastSuccess(CONSTANTS.editSuccessMsg);
         }
+        return contact;
       });
     } else {
       // For new contact.
@@ -40,7 +41,7 @@ function ContactInformationController($scope, contactInformationFactory, utilFac
   }
   
   $scope.editContact = function (id) {
-    $scope.contact = getContactById(id) || getContactInfoModel();
+    $scope.contact = angular.copy(getContactById(id)) || getContactInfoModel();
     $scope.contactFormName = CONSTANTS.editContact;
   }
   
@@ -61,7 +62,7 @@ function ContactInformationController($scope, contactInformationFactory, utilFac
       return contact.id == id;
     });
     
-    return contact[0] || undefined;
+    return contact[0] || null;
   }
   
   function getContactInfoModel () {
