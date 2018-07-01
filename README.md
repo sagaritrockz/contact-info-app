@@ -55,6 +55,14 @@ For deployment, upload all the files from the ./dist directory to the server.
 * [materializecss] - Front-end framework based on Material Design
 * [jasmine-karma] - unit testing framework for angularjs applications
 
+
+## Future Enhancements
+
+* Saving and retrieving data from DB.
+* Pagination.
+* Capture more details about contact. 
+
+
 ## Author
 
 * **Sagar Patel** - *Initial work* - (https://github.com/sagaritrockz)
