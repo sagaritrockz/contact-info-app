@@ -2,6 +2,16 @@
 
 Contact Book is an application to store your basic contact details like name, phone number, email. It also allows to edit and delete contacts. On top of that, it has feature to mark a contact's status whether it is active or not.
 
+
+## Features
+
+* Create new contact
+* Edit contact
+* Delete contact
+* Constants which can be used for localization(will need a bit modification though)
+* Theme based approach for easy styling the entire application
+
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
